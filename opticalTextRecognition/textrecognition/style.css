@@ -1,0 +1,12 @@
+/* layout */
+.rounded-downloader {
+	width: 8em;
+	height: 8em;
+	border-radius: 50%;
+	border: 1px solid var(--clr-primary-purple);
+}
+
+.main-card {
+	width: min(100%, 30em);
+}
+
