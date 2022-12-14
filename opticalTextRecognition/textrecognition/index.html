@@ -5,23 +5,26 @@
 		<meta name="viewport" content="width=device-width" initial-scale="1.0">
 		<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/assets/fontawesome/all.min.css">
     	<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/assets/fontawesome/fontawesome.min.css">
+    	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/style.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div class="pd-mid" style="min-height: 100vh;">
 			<div class="container flex justify-center align-center pd-mid" style="min-height: 100vh;">
-				<div class="flex justify-center align-center border pd-mid main-card">
-					<form class="flex justify-center align-center flex-direction-column">
-						<div class="rounded-downloader">
-							
+				<div class="main-card drop-zone flex justify-center align-end pd-inline-mid pd-top-large pd-bottom-large">
+					<form class="form flex justify-center align-center flex-direction-column">
+						<div class="rounded-downloader drop-zone__animate flex justify-center align-center">
+							 <img src="/opticalTextRecognition/assets/icons/arrow-up.svg" alt="arrow-up" class="icon">
 						</div>
-						<input type="file" hidden>
-						<p>Drag and drop files to upload or</p>
-						<button>Choose files</button>
+						<input type="file" class="hidden-input" hidden>
+						<p class="mg-top-mid">Drag and drop image to upload or</p>
+						<button class=" btn btn--call-to-action mg-top-mid choose-files">Choose Image</button>
 					</form>
 				</div>
 			</div>
 		</div>
+
+		<script type="module" src="/opticalTextRecognition/textrecognition/script.js"></script>
 	</body>
 </html>

@@ -16,6 +16,7 @@
 	--clr-primary-purple: #c181ff;
 	--clr-neutral-blue: #6987f8;
 	--clr-neutral-lightblue: #c4d1fe;
+	--clr-neutral-gray: #c7cfd7;
 
 	--pd-small: .5em;
 	--pd-large: 2em;
@@ -100,7 +101,7 @@ select {
 
 body {
 	padding: var(--pd-small);
-	font: var(--ff-inter);
+	font-family: var(--ff-inter);
 }
 
 /*=====> utility classes <=====*/
@@ -123,6 +124,7 @@ body {
 
 .justify-center {justify-content: center}
 .align-center {align-items: center}
+.align-end {align-items: end;}
 .justify-space-between {justify-content: space-between}
 .justify-end {justify-content: flex-end}
 
@@ -165,6 +167,14 @@ body {
 .pd-large {padding: var(--pd-large);}
 .pd-small {padding: var(--pd-small);}
 .pd-mid {padding: var(--pd-mid)}
+
+.pd-inline-small {padding-inline: var(--pd-small);}
+.pd-inline-mid {padding-inline: var(--pd-mid);}
+.pd-inline-large {padding-inline: var(--pd-large);}
+
+.pd-block-small {padding-block: var(--pd-small);}
+.pd-block-mid {padding-block: var(--pd-mid);}
+.pd-block-large {padding-block: var(--pd-large);}
 
 .pd-left-small {padding-left: var(--pd-small)}
 .pd-left-mid {padding-left: var(--pd-mid) }
@@ -212,6 +222,12 @@ body {
 
 /*=====> components <=====*/
 
+/* icons */
+.icon {
+	width: 2.5em;
+	height: 2.5em;
+}
+
 /*button*/
 .btn {
 	border: none;
@@ -225,12 +241,14 @@ body {
 }
 
 .btn--call-to-action {
-	color: hsl(var(--clr-neutral-offwhite));
-	background-color: hsl(var(--clr-primary-red));
+	color: var(--clr-primary-lightBlue);
+	background-color: var(--clr-neutral-blue);
 }
 
 .btn--call-to-action:hover {
-	background-color: hsl(var(--clr-neutral-vdb));
+	background-color: var(--clr-primary-lightBlue);
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
 }
 
 .btn--call-to-action.active {
