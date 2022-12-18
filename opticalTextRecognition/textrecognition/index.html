@@ -6,25 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/assets/fontawesome/all.min.css">
     	<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/assets/fontawesome/fontawesome.min.css">
     	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/opticalTextRecognition/style.css">
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div class="pd-mid" style="min-height: 100vh;">
-			<div class="container flex justify-center align-center pd-mid" style="min-height: 100vh;">
-				<div class="main-card drop-zone flex justify-center align-end pd-inline-mid pd-top-large pd-bottom-large">
-					<form class="form flex justify-center align-center flex-direction-column">
-						<div class="rounded-downloader drop-zone__animate flex justify-center align-center">
-							 <img src="/opticalTextRecognition/assets/icons/arrow-up.svg" alt="arrow-up" class="icon">
+			<div class="container--layout container flex pd-small" style="min-height:100vh;">
+				<div class="flex flex-direction-column align-center justify-center pd-mid" style="flex:1;">
+					<p class="error text-center mg-bottom-mid clr-primary-red"></p>
+					<div class="main-card drop-zone flex justify-center align-end pd-inline-mid pd-top-large pd-bottom-large position-relative">
+						<div class="preview position-absolute">
+							<span class="cancel position-absolute cursor-pointer pd-right-mid pd-top-small">&times;</span>
+							<img class="preview__image" src="" alt="previewImage">
 						</div>
-						<input type="file" class="hidden-input" hidden>
-						<p class="mg-top-mid">Drag and drop image to upload or</p>
-						<button class=" btn btn--call-to-action mg-top-mid choose-files">Choose Image</button>
-					</form>
+						<form class="form flex justify-center align-center flex-direction-column">
+							<div class="rounded-downloader animate drop-zone__animate flex justify-center align-center">
+								<!-- <img src="../assets/icons/image.svg" alt="image-icon" class="image-icon"> -->
+								<img src="../assets/icons/arrow-up.svg" alt="arrow-up" class="icon">
+							</div>
+							<input type="file" class="hidden-input" hidden>
+							<p class="mg-top-large">Drag and drop image to upload or</p>
+							<button class=" btn btn--call-to-action mg-top-mid choose-files">Choose Image</button>
+						</form>
+					</div>
+				</div>
+
+				<div class="ocr--text text-center pd-mid flex justify-center align-center" style="flex:1;">
+					<div class="ocr--card mg-top-mid">
+						<p>just a few minutes your text is incoming...</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<script type="module" src="/opticalTextRecognition/textrecognition/script.js"></script>
+		<script type="module" src="script.js"></script>
 	</body>
 </html>

@@ -33,19 +33,17 @@ export class DragAndDrop{
 		})
 	}
 
-	drop(zone, inputElement){
-		zone.addEventListener('drop', (e)=>{
-			e.preventDefault();
-			//let files;
-			if(e.dataTransfer.files.length){
-				inputElement.files = e.dataTransfer.files;
+	drop(data, inputElement){
 
-				//files = inputElement.files;
-			}
+		let files;
+		if(data.length){
+			inputElement.files = data;
 
-			console.log(inputElement.files)
+			files = inputElement.files;
+		}
 
-		})
+		return files;
+
 	}
 
 	preview(){
@@ -55,8 +53,39 @@ export class DragAndDrop{
 	
 }
 
-export function animate(object){
+export class Animate{
+	variantOne(objects, callback = false){
+		let startPoint = 0;
+		const endPoint = 100;
+		const speed = 20;
+		
+		objects.roundedDownloader.classList.remove('animate');
+		objects.imgIcon.src = "../assets/icons/image.svg";
 
+		let done = false;
+		const progress = setInterval(()=>{
+			startPoint++
+
+			objects.roundedDownloader.style.background = `conic-gradient(#6987f8 ${startPoint * 3.6}deg, #ededed 0deg)`;
+
+			if(startPoint == endPoint){
+				objects.imgIcon.src = "../assets/icons/tick.svg";
+                const successDisplay = objects.successDisplay;
+                successDisplay.classList.replace('clr-primary-red', 'clr-primary-green');
+                successDisplay.textContent = 'we are ready to ocr!!';
+				if(callback){
+					callback();
+				}
+				clearInterval(progress);
+			}
+		}, speed)
+
+		return endPoint;
+	}
+
+	variantTwo(){
+		
+	}
 }
 
 export function checkFileType(filename){
@@ -68,7 +97,7 @@ export function checkFileType(filename){
 	let reqExt = ['jpg', 'jpeg', 'png'];
 
 	if (!reqExt.includes(fileExt)) {
-		let error = "cant preview this file type!!";
+		const error = "only jpg, jpeg, png images are allowed!!";
 		return error;
 	}
 }

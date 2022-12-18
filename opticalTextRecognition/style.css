@@ -17,6 +17,8 @@
 	--clr-neutral-blue: #6987f8;
 	--clr-neutral-lightblue: #c4d1fe;
 	--clr-neutral-gray: #c7cfd7;
+	--clr-primary-red: #f73131;
+	--clr-primary-green: rgba(0, 128, 0, 0.792);
 
 	--pd-small: .5em;
 	--pd-large: 2em;
@@ -28,9 +30,9 @@
 	--bd-rdx: .5em;
 
 	--pd-btn: .48em;
-	--fs-btn: .9rem;
+	--fs-btn: .7rem;
 
-	--fs-16: clamp(0.90rem, 2.5vw, 0.95rem);
+	--fs-16: clamp(0.85rem, 2.5vw, 0.95rem);
 	--fs-mid: 1.2rem;
 	--fs-32: clamp(1.2rem, 3vw, 2.5rem);
 	--fs-title-main: 2.5rem;
@@ -102,6 +104,7 @@ select {
 body {
 	padding: var(--pd-small);
 	font-family: var(--ff-inter);
+	font-size: var(--fs-16);
 }
 
 /*=====> utility classes <=====*/
@@ -120,7 +123,7 @@ body {
 
 .flex {display: flex}
 
-.flex > * + * {margin-left: var(--gap, 1rem)}
+/* .flex > * + * {margin-left: var(--gap, 1rem)} */
 
 .justify-center {justify-content: center}
 .align-center {align-items: center}
@@ -218,6 +221,15 @@ body {
 
 /*border*/
 .border {border: 1px solid black}
+
+/* positioning */
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+}
 
 
 /*=====> components <=====*/
