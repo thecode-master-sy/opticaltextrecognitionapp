@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="pd-mid" style="min-height: 100vh">
+      <div class="container--layout container flex pd-small align-center">
+        <div class="equal flex">
+          <div
+            class="equal__items flex flex-direction-column pd-mid align-center"
+          >
+            <p class="error text-center mg-bottom-mid clr-primary-red"></p>
+            <div
+              class="main-card drop-zone flex justify-center pd-inline-mid pd-top-large pd-bottom-mid position-relative border-rounded flex-direction-column"
+            >
+              <div class="">
+                <form
+                  class="form flex justify-center align-center flex-direction-column"
+                >
+                  <div
+                    class="rounded-downloader animate drop-zone__animate flex justify-center align-center"
+                  >
+                    <!-- <img src="../assets/icons/image.svg" alt="image-icon" class="image-icon"> -->
+                    <img
+                      src="../assets/icons/arrow-up.svg"
+                      alt="arrow-up"
+                      class="icon icon--arrow-up show"
+                    />
+                    <img
+                      src="../assets/icons/image.svg"
+                      alt="arrow-up"
+                      class="icon icon--image"
+                    />
+                    <img
+                      src="../assets/icons/tick.svg"
+                      alt="arrow-up"
+                      class="icon icon--tick"
+                    />
+                  </div>
+                  <input type="file" class="hidden-input" hidden />
+                  <p class="mg-top-large">Drag and drop image to upload or</p>
+                  <button class="btn mg-top-mid choose-files">
+                    Choose Image
+                  </button>
+                </form>
+
+                <div class="preview position-relative mg-top-mid border">
+                  <img class="preview__image" alt=" " />
+                  <span
+                    class="cancel position-absolute pd-small cursor-pointer mg-small"
+                  >
+                    &times;</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="ocr--text text-center pd-mid flex justify-center equal__items flex-direction-column"
+          >
+            <p class="confidence mg-bottom-small"></p>
+
+            <div class="ocr--card pd-mid border-rounded position-relative">
+              <div
+                class="copyIconContainer position-absolute pd-small cursor-pointer"
+                style="top: 4px; right: 4px; z-index: 10"
+              >
+                <img
+                  src="../assets/icons/copy.svg"
+                  class="copyIcon cursor-pointer"
+                />
+                <span class="tooltip position-absolute pd-small">copy</span>
+              </div>
+
+              <p class="ocr--text--para position-relative">
+                your text will appear here...
+                <a href="#" class="seeMore position-absolute">see more..</a>
+              </p>
+
+              <div class="circular-loader position-absolute">
+                <span class="sub-loader"></span>
+                <span class="sub-loader"></span>
+                <span class="sub-loader"></span>
+                <span class="sub-loader"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mg-top-large">
+        <button class="btn btn--ocr">ocr</button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
